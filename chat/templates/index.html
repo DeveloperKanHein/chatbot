@@ -232,7 +232,7 @@
           appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
           msgerInput.value = "";
 
-            fetch('http://103.47.185.103/chat/', {
+            fetch('http://103.47.185.103:8000/chat/', {
                     method: 'POST',
                     headers: {
                         "X-CSRFToken": getCookie("csrftoken"),
