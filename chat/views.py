@@ -16,6 +16,7 @@ def chatmsg(request):
     if request.method == 'POST':
         input = json.loads(request.body.decode('utf-8'))
         input_text = input['name']
+        print(input_text)
         #handle bot message
         response = auto_reply(input_text)
         response_data = {}
