@@ -28,6 +28,7 @@ def chatmsg(request):
         return HttpResponse(json.dumps(response_data),  content_type="application/json")
     
 def auto_reply(input_text):
+    print('start instance')
     bot = ChatBot('MedBot')
     print(input_text)
 
