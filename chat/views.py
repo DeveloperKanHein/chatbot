@@ -26,6 +26,7 @@ def chatmsg(request):
     
 def auto_reply(input_text):
     bot = ChatBot('MedBot')
+    print(input_text)
 
     # bot = ChatBot('MedBot',
                   
