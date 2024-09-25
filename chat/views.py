@@ -16,21 +16,18 @@ def chatmsg(request):
     if request.method == 'POST':
         input = json.loads(request.body.decode('utf-8'))
         input_text = input['name']
-        print(input_text)
-        
-        
-        
-        return HttpResponse(str(input_text),  content_type="application/json")
+        print(input_text)        
+        # return HttpResponse(str(input_text),  content_type="application/json")
         #handle bot message
-        # response = auto_reply(input_text)
-        # response_data = {}
-        # response_data['result'] = 'true'
-        # response_data['message'] = response
-        # print(response)
-        # return HttpResponse(json.dumps(response_data),  content_type="application/json")
+        response = auto_reply(input_text)
+        response_data = {}
+        response_data['result'] = 'true'
+        response_data['message'] = response
+        print(response)
+        return HttpResponse(json.dumps(response_data),  content_type="application/json")
     
 def auto_reply(input_text):
-    bot = ChatBot('MedBot')
+    # bot = ChatBot('MedBot')
     print(input_text)
 
     bot = ChatBot('MedBot',
