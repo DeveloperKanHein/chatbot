@@ -5,7 +5,13 @@ import json
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 #from django.template.context_processors import csrf
- 
+
+import nltk
+
+# Download required NLTK modules
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet') 
 
 # Create your views here.
 @ensure_csrf_cookie
