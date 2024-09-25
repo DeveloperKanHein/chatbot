@@ -28,22 +28,22 @@ def chatmsg(request):
         return HttpResponse(json.dumps(response_data),  content_type="application/json")
     
 def auto_reply(input_text):
-    # bot = ChatBot('MedBot')
+    bot = ChatBot('MedBot')
     print(input_text)
 
-    bot = ChatBot('MedBot',
+    # bot = ChatBot('MedBot',
                   
-                read_only = True, 
-                preprocessors=['chatterbot.preprocessors.convert_to_ascii', 
-                                'chatterbot.preprocessors.unescape_html',
-                                'chatterbot.preprocessors.clean_whitespace'],
-                logic_adapters = [
-                    {
-                        'import_path': 'chatterbot.logic.BestMatch',
-                        'default_response': 'Sorry, I am unable to process your request. Please try again, or contact us for help.',
-                        'maximum_similarity_threshold': 0.90
-                    }
-                ],)
+    #             read_only = True, 
+    #             preprocessors=['chatterbot.preprocessors.convert_to_ascii', 
+    #                             'chatterbot.preprocessors.unescape_html',
+    #                             'chatterbot.preprocessors.clean_whitespace'],
+    #             logic_adapters = [
+    #                 {
+    #                     'import_path': 'chatterbot.logic.BestMatch',
+    #                     'default_response': 'Sorry, I am unable to process your request. Please try again, or contact us for help.',
+    #                     'maximum_similarity_threshold': 0.90
+    #                 }
+    #             ],)
 
     trainer = ListTrainer(bot)
     
