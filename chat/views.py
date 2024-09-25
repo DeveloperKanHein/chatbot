@@ -49,6 +49,8 @@ def auto_reply(input_text):
                 ],)
 
     trainer = ListTrainer(bot)
+    
+    print("start train")
 
     trainer.train([
         "Hi",
@@ -172,6 +174,8 @@ def auto_reply(input_text):
         "Thanks!",
         "Of course!",
         ])
+    
+    print('end train')
 
     value =bot.get_response(input_text)
 
