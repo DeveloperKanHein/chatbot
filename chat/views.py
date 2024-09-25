@@ -27,9 +27,9 @@ def chatmsg(request):
 def auto_reply(input_text):
     # bot = ChatBot('MedBot')
 
-    bot = ChatBot('MedBot',
+    bot = ChatBot('Bot',
                   
-                database_uri='sqlite:///db.sqlite3',
+                # database_uri='sqlite:///db.sqlite3',
                 read_only = True, 
                 preprocessors=['chatterbot.preprocessors.convert_to_ascii', 
                                 'chatterbot.preprocessors.unescape_html',
