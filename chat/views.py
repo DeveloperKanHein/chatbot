@@ -35,7 +35,7 @@ def chatmsg(request):
     
 def auto_reply(input_text):
     print('start instance')
-    # bot = ChatBot('MedBot')
+    bot = ChatBot('MedBot')
     print(input_text)
 
     bot = ChatBot('MedBot',
